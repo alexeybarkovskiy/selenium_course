@@ -13,9 +13,9 @@ try:
     input1 = browser.find_element(By.CSS_SELECTOR, ".first_block .first_class input")
     input1.send_keys("Ivan")
     input1 = browser.find_element(By.CSS_SELECTOR, ".first_block .second_class input")
-    input1.send_keys("Ivan")
+    input1.send_keys("Petrov")
     input1 = browser.find_element(By.CSS_SELECTOR, ".first_block .third_class input")
-    input1.send_keys("Ivan")
+    input1.send_keys("av12@mail.ru")
 
     # Отправляем заполненную форму
     button = browser.find_element(By.CSS_SELECTOR, "button.btn")
