@@ -1,1 +1,1 @@
-# auto_tests_course
+# selenium_course
