@@ -1,0 +1,96 @@
+# Импорт пакета webdriver
+from selenium import webdriver
+
+# Импорт пакета для отправки запроса по клавише enter
+from selenium.webdriver.common.keys import Keys
+
+# Импорт пакета для задержки выполнения команды
+import time
+
+# Импорт пакета для ожидания
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+# Импорт пакета для нахождения элемента на странице через BY
+from selenium.webdriver.common.by import By
+
+# Импорт пакета для работы с операционной системой
+import os
+
+# Инициализация браузера Chrome
+browser = webdriver.Chrome()
+
+# Открыть ссылку
+browser.get(url)
+
+# Открыть окно браузера в широком формате
+browser.maximize_window()
+
+# Обновление страницы 
+browser.refresh()
+
+# Закрыть браузер
+browser.quit()
+
+# Поиск элемента по css_selector
+"тег[class*=фраза до пробела]"
+
+# Поиск элемента по xpath
+//тег[@class='описание класса']
+//тег*[text()='содержимое тега']
+//тег*[@href='содержимое атрибута']
+
+# Ввод значения в строку
+input.send_keys(значение)
+
+# Клик по кнопке
+input.click()
+
+# Удаление элемента из строки ввода
+input.clear()
+
+# Поиск элемента по тексту ссылки и переход по нему
+link = browser.find_element_by_link_text("полный текст ссылки")
+link.click()
+
+# Поиск элемента со ссылкой по подстроке и переход по нему
+link = browser.find_element_by_partial_link_text("описание элемента в подстроке")
+link.click()
+
+# Скролл страницы
+browser.execute_script("window.scrollBy(0, 100);")
+
+# Прикрепление файла из директории
+current_dir = os.path.abspath(os.path.dirname(__file__)) - директория файла
+file_path = os.path.join(current_dir, "file.txt") - директория и название файла
+input = browser.find_element_by_name("file") - поиск кнопки для прикрепления файла
+input.send_keys(file_path) - обозначение директории до файла
+
+# Принятие всплывающих окон предупреждения
+confirm = browser.switch_to.alert
+confirm.accept()
+
+# Отклонение всплывающих окон предупреждения
+confirm = browser.switch_to.alert
+confirm.dismiss()
+
+# Извлечение текста из всплывающих окон
+confirm = browser.switch_to.alert
+msg = alert_obj.text()
+print(msg)
+
+# Открытие нового окна браузера
+new_window_1 = browser.window_handles[0] - обозначение старого окна браузера
+new_window_2 = browser.window_handles[1] - обозначение нового окна браузера
+browser.switch_to.window(new_window_2) - подтверждение нового окна браузера
+
+# Ожидания неявные
+browser.implicitly_wait(5)
+
+# Ожидания явные 
+element = WebDriverWait(browser, 5).until(
+        EC.text_to_be_present_in_element((By.ID, "price"), "100")) - ожидание пока элемент не будет равен 100
+
+
+
+
