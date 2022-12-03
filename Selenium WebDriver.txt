@@ -32,6 +32,12 @@ browser.refresh()
 # Закрыть браузер
 browser.quit()
 
+# Перемещение назад по стрелке в браузере
+browser.back()
+
+# Перемещение вперёд по стрелке в браузере
+browser.forward()
+
 # Поиск элемента по css_selector
 "тег[class*=фраза до пробела]"
 
@@ -46,6 +52,9 @@ input.send_keys(значение)
 # Клик по кнопке
 input.click()
 
+# Клик через enter
+input.send_keys(Keys.ENTER)
+
 # Удаление элемента из строки ввода
 input.clear()
 
@@ -59,6 +68,11 @@ link.click()
 
 # Скролл страницы
 browser.execute_script("window.scrollBy(0, 100);")
+
+# Скриншот страницы
+now_date = datetime.datetime.utcnow().strftime("%Y".%m.%d.%H.%M.%S.") - переменная с датой
+name_screenshot = 'screenshot' + now_date + '.png' - переменная скриншота
+browser.save_screenshot('путь до директории где хранятся скриншоты' + name_screenshot) - сохранение скриншота
 
 # Прикрепление файла из директории
 current_dir = os.path.abspath(os.path.dirname(__file__)) - директория файла
